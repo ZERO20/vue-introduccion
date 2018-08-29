@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Curso de introduccioón a Vue.js</title>
+
+	<link rel="stylesheet" href="assets/css/estilos.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="selector">
+		<div>
+			{{ mensaje }}<br>{{ numero }}<br>{{ booleano }}<br>
+			{{ unObjeto.nombre }} {{ unObjeto.apellidos }} 
+
+		</div>
+		<div> {{ $data }}</div>		
+	</div>
+	<script src="assets/js/vue.js"></script>
+</body>
+</html>
+
+<!-- La manera más facil de enlazar datos es usando la sintaxis de {{ llaves dobles }}-->
+<!-- Las propiedades y métodos de instancias de vue tienen el prefijo $ para diferenciarlos de las del usuario-->

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Curso de introduccioón a Vue.js</title>
+
+	<link rel="stylesheet" href="assets/css/estilos.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<main>
+		<div @click="ok=!ok">Pulsa para alternar</div>
+		<div v-show="ok" class="animated bounceInLeft">Ahora soy Visible</div>
+		<p>{{ $data }}</p>
+	</main>
+	<script src="assets/js/vue.js"></script>
+</body>
+</html>
+
+<!-- Una directiva es un fragmento de código que ejecuta una acción.
+Para crear una directiva en vue se utiliza la  palabra v-directiva donde directiva es el nombre de la directiva como v-show que muestra u oculta elementos segun una evaluación
+v-show añade display-none a los elementos que se le aplique
+-->

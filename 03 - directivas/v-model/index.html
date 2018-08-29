@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Curso de introduccioón a Vue.js</title>
+
+	<link rel="stylesheet" href="assets/css/estilos.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<main>
+		<input v-model="mensaje" class="animated bounceInLeft">
+		<p class="animated fadeIn">{{ mensaje}}</p>
+		<p>{{ $data }}</p>
+	</main>
+	<script src="assets/js/vue.js"></script>
+</body>
+</html>
+
+<!-- Una directiva es un fragmento de código que ejecuta una acción.
+Para crear una directiva en vue se utiliza la  palabra v-directiva donde directiva es el nombre de la directiva como v-model permite asociar los datos del modelo a un elemento del formulario como un input de entrada de texto, un textarea, etc.
+Si cambia la propiedad mensaje en el modelo cambia en la vista y si cambia en la vista cambia en el modelo, probar con vm.mensaje = 'Nuevo valor desde la consola del navegador'
+-->
