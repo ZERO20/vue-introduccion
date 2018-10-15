@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aplicacion de tareas</title>
+
+	<link rel="stylesheet" href="assets/css/estilos.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div id="misTareas">		
+		<h1>Mis tareas</h1>
+		<input type="text" placeholder="Añade una nueva tarea..." v-model="nuevaTarea" v-on:keyup.enter="addTarea">
+		<ul>
+			<li class="animated bounceInLeft" v-for="(tarea, index) in tareas" @click="completarTarea(tarea)" :class="{tachar: tarea.completada}">								
+				<div class="eliminar" @click="eliminarTarea(index)"></div>
+				&nbsp; {{ tarea.texto }}				
+				<div :class="{completada: tarea.completada, sinCompletar: !tarea.completada}"></div>				
+			</li>
+		</ul>
+	</div>
+	<!--Aplicación para agregar, listar,eliminar y marcar tareas como realizadas-->
+	<script src="assets/js/vue.js"></script>
+</body>
+</html>
