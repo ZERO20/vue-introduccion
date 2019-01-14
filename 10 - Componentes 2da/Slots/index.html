@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Componentes</title>
+
+	<link rel="stylesheet" href="assets/css/estilos.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<main>
+		<advertencia class="advertencia" :mensaje="advertencia">
+			<!-- Para añadir más slots basta con agregar un atributo llamado slot sobre la etiqueta que reemplazará el contenido -->			
+			<template slot="aviso">¡CUIDADO!</template>
+			<!-- Solo puede haber un solo slot a no ser que tenga un nombre que lo identifique y la etiqueta que lo reemplazará será indiferente a la existente, lo reemplaza si encuentra un slot -->
+			<template>Error al conectar a la base de datos</template>
+		</advertencia>
+		<pre>{{ $data }}</pre>
+	</main>
+	<script src="assets/js/vue.js"></script>
+</body>
+</html>
