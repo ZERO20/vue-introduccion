@@ -1,5 +1,5 @@
 var vm = new Vue({
-	el: 'main',
+	el: '#selector',
 	data: {
 		mostrar: true
 	}
