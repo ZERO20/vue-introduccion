@@ -1,0 +1,25 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Componentes - Transiciones </title>
+
+		<link rel="stylesheet" href="assets/css/estilos.css">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="selector">
+			<button @click="mostrar = !mostrar">Haz click</button>
+			
+			<transition name="fade">
+				<p v-if="mostrar">Transición Simple</p>			
+			</transition>
+		</div>
+		<!-- Vue ofrece 6 clases para el manejo de transiciones, 3 son para la entrada y 3 para la salida, es decir cuando un objeto aparece o cuando se quiere eliminar de la escena o de la pantalla.
+		Entrada: v-enter, v-enter-active y v-enter-to
+		Salida: v-leave, v-leave-active y v-leave-to
+		** https://vuejs.org/v2/guide/transitions.html#Transition-Classes
+		 -->
+		<script src="assets/js/vue.js"></script>
+	</body>
+	</html>

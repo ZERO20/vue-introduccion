@@ -2,10 +2,14 @@
 @import "https://fonts.googleapis.com/css?family=Raleway";
 
 
-.advertencia, pre { 
-	width: 50%; 
+body {
+	width: 50%;
+	height: auto;
+	margin: 0 auto; 	
+}
+p,button { 
+	width: 100%; 
 	height: auto; 
-	margin: 0 auto; 
 	background-color: #00AA88; 
 	padding: 20px; 
 	border-radius: 10px; 
@@ -19,12 +23,14 @@
 	cursor: pointer;
 	box-shadow: 2px 4px 5px #666;
 }
-pre {
-	background-color: #f5f5f5;
-	color: #888;
-	white-space: pre-wrap;       /* css-3 */
- 	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
- 	white-space: -pre-wrap;      /* Opera 4-6 */
- 	white-space: -o-pre-wrap;    /* Opera 7 */
- 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
+.fade-enter-active, .fade-leave-active {
+	opacity: 1;
+  	transition-duration: 2.5s;
 }
+
+/*se reemplaza el la letra v por el nombre de la transición, es decir v-enter pasa a ser fave-enter*/
+.fade-enter, .fade-leave-to {
+  	opacity: 0;
+}
+
