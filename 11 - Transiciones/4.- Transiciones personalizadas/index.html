@@ -1,0 +1,30 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Componentes - Transiciones Personalizadas</title>
+
+		<link rel="stylesheet" href="assets/css/estilos.css">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="selector">
+			<button @click="mostrar = !mostrar">Haz click</button>
+			
+			<transition name="mi-trans"
+				enter-active-class="animated tada"
+				leave-active-class="animated bounceOutRight">
+				<p v-if="mostrar">Transición personalizada</p>
+			</transition>
+		</div>
+		<!-- Vue ofrece 6 atributos para manejar transiciones.
+		Entrada: enter-class, enter-active-class y enter-class
+		Salida: leave-class, leave-active-class y leave-to-class
+		**https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes
+
+		Al usar los atributos de transiciones sobre las etiquetas html se ignorará cualquier transición que se tenga sobre los estilos CSS, se agrega el atributo y las classes a ser aplicadas para ello, en este ejemplo se utilizó la librería animate.css para aplicar clases ya hechas, se pueden agregar más efectos consultando la página de documentación:
+		**https://daneden.github.io/animate.css/
+		 -->
+		<script src="assets/js/vue.js"></script>
+	</body>
+	</html>
