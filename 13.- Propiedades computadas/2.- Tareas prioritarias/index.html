@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aplicacion de tareas prioritarias</title>
+
+	<link rel="stylesheet" href="assets/css/estilos.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div id="misTareas">		
+		<h1>Mis tareas</h1>
+		<input type="text" placeholder="Añade una nueva tarea..." v-model="nuevaTarea" v-on:keyup.enter="addTarea">
+		<ul>
+			<!-- Ahora se itera sobre la propiedad computada llamada tareasPrioritarias que filtra las de prioridad en true -->	
+			<li class="animated bounceInLeft" v-for="(tarea, index) in tareasPrioritarias" @click="completarTarea(tarea)" :class="{tachar: tarea.completada}">
+				<div class="eliminar" @click="eliminarTarea(index)"></div>
+				&nbsp; {{ tarea.texto }}				
+				<div :class="{completada: tarea.completada, sinCompletar: !tarea.completada}"></div>				
+			</li>
+		</ul>
+	</div>
+	<!--Aplicación para agregar, listar,eliminar y marcar tareas como realizadas-->
+	<!-- Solo se mostrarán las tareas que tengan prioridad, por lo tanto se creó una tarea computada para mostrar aquellas que tienen la propiedad en true -->
+	<script src="assets/js/vue.js"></script>
+</body>
+</html>
