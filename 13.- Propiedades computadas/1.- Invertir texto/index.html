@@ -1,0 +1,20 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Componentes - Propiedades computadas</title>
+
+		<link rel="stylesheet" href="assets/css/estilos.css">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<main class="animated bounceIn">
+			<p>{{ mensaje.split('').reverse().join('') }}</p><!-- Esto puede complicar si se sigue agregando más -->
+			<p>{{ 'Computado: '}}{{ mensajeInvertido }}</p><!-- Usando una propiedad computada -->
+			<!-- Una propiedad computada nos permite agregar más lógica a nuestras plantillas.
+				Se almacenan en caché y solo se vuelve a evaluar cuando una de sus dependencias cambie. 
+				Mientras el mensaje no cambie, el acceso a esa propiedad computada devolverá inmediantamente el resultado que tenia cálculado previamente sin tener que volver a ejecutar la misma función -->
+		</main>
+		<script src="assets/js/vue.js"></script>
+	</body>
+	</html>
