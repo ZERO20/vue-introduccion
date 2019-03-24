@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Búsqueda filtrada</title>
+
+	<link rel="stylesheet" href="assets/css/estilos.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<main class="animated bounceInLeft">
+		<input type="search" v-model="busqueda" placeholder="Busca aquí tu pelicula...">
+		<ul>
+			<li v-for="pelicula in buscarPorTitulo" class="caratula">
+				<img :src="pelicula.imagen">{{ pelicula.titulo }}
+			</li>
+		</ul>
+		
+	</main>
+	<!--Aplicación para filtrar sobre una lista de peliculas-->
+	<script src="assets/js/vue.js"></script>
+</body>
+</html>
